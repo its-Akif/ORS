@@ -42,7 +42,7 @@ export default function MultiActionAreaCard({ imagePath, title, description }: P
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Share
+                    Book
                 </Button>
             </CardActions>
             {console.log(imagePath)}

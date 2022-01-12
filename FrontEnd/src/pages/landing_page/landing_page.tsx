@@ -1,8 +1,8 @@
 import Navbar from '../../components/Navbar'
 import AdCard from '../../components/AdCard'
 import { useState, useEffect } from 'react'
-import Grid from '@mui/material/Grid';
-
+import Grid from '@mui/material/Grid'
+import Footer from '../../components/Footer/Footer'
 
 
 export default function LandingPage() {
@@ -12,15 +12,15 @@ export default function LandingPage() {
     const [description, setDescription] = useState('')
 
     useEffect(() => {
-        setImagePath("assets/images/2.jpg")
+        setImagePath("@/assets/images/2.jpg")
         setTitle("Mercedez Benc C12")
         setDescription("A very Super fast car . 2000 cc 450 hp and mny more")
 
     });
 
-    return (<>
+    return (
+    <div>
         <Navbar />
-
         <Grid container sx={{ mt: 7 }} spacing={2}
             justifyContent="center"
             alignContent="center" >
@@ -46,7 +46,10 @@ export default function LandingPage() {
             <Grid item>
                 <AdCard imagePath={imagePath} title={title} description={description} />
             </Grid>
-
         </Grid>
-    </>)
+       
+        <Footer />
+    </div>
+    
+    )
 }
